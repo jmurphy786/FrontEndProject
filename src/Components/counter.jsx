@@ -14,13 +14,13 @@ class counter extends Component {
   fileUploadHandler = () => {
 
     const fd = new FormData();
-    fd.append("myFile", this.state.selectedFile);
+    fd.append("file", this.state.selectedFile);
     console.log(fd);
 
 
     let xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:8090/api/5bc86952c2e82518b84759a7/upload" );
-    xhttp.setRequestHeader("Content-Type", "multipart/form-data");
+    xhttp.open("POST", "http://192.168.1.117:8090/api/5bc88e7ac2e8250f2c94bce1/upload" );
+    //xhttp.setRequestHeader("Content-Type", "multipart/form-data");
     //xhttp.setRequestHeader("Key", "file");
     xhttp.setRequestHeader('Access-Control-Allow-Origin','*');
     xhttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
@@ -44,4 +44,6 @@ class counter extends Component {
 }
 
 export default counter;
+
+
 
